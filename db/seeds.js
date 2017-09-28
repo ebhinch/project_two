@@ -110,8 +110,10 @@ const candlerParkFarmersMarket = new EventModel({
     image: ""
 })
 
-const neighborhoods = [cabbagetown, inmanPark, candlerPark];
 const users = [erica, victoria, tom];
+
+
+const neighborhoods = [cabbagetown, inmanPark, candlerPark];
 const cabbagetownEvents = [chompAndStomp, yardSale];
 const inmanParkEvents = [inmanParkRestoWeek, freedomFarmersMarket];
 const candlerParkEvents = [candlerParkFarmersMarket];

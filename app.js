@@ -33,11 +33,16 @@ app.use(express.static(path.join(__dirname, 'public')));
 const indexController = require("./routes/indexController");
 app.use("/", indexController);
 
-// const eventController = require("./routes/eventController");
-// app.use("/", eventController);
+const eventController = require("./routes/eventController");
+app.use("/neighborhoods/:neighborhoodId/events", eventController);
 
 const neighborhoodController = require("./routes/neighborhoodController");
 app.use("/neighborhoods", neighborhoodController);
+
+
+
+
+
 
 // const userController = require("./routes/userController");
 // app.use("/", userController);

@@ -1,0 +1,29 @@
+<div>
+    <h1>Events in {{neighborhood.name}}</h1>
+
+
+    {{#each neighborhood.events}}
+        <div>
+            <div> {{this.image}} </div>   
+           
+            <a href="/neighborhoods/{{../neighborhood._id}}/events/{{this._id}}">{{this.name}}</a>
+            - {{this.date}}  
+            
+            <a href="/neighborhoods/{{../neighborhood._id}}/events/{{this._id}}/edit">Edit Event</a>
+            
+            {{!-- need to build url out --}}
+            <a href="">Delete Event</a>
+        </div>        
+
+    {{/each}}
+
+
+
+    <h6>
+        <a href="">Submit a New {{neighborhood.name}} Event</a>
+        <a href="/neighborhoods">Back to Neighborhoods List</a>
+    </h6>
+
+
+
+</div>
