@@ -36,8 +36,8 @@ app.use("/", indexController);
 // const eventController = require("./routes/eventController");
 // app.use("/", eventController);
 
-// const neighborhoodController = require("./routes/neighborhoodController");
-// app.use("/", neighborhoodController);
+const neighborhoodController = require("./routes/neighborhoodController");
+app.use("/neighborhoods", neighborhoodController);
 
 // const userController = require("./routes/userController");
 // app.use("/", userController);
