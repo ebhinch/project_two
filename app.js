@@ -39,13 +39,8 @@ app.use("/neighborhoods/:neighborhoodId/events", eventController);
 const neighborhoodController = require("./routes/neighborhoodController");
 app.use("/neighborhoods", neighborhoodController);
 
-
-
-
-
-
 // const userController = require("./routes/userController");
-// app.use("/", userController);
+// app.use("/users", userController);
 
 
 

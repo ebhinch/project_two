@@ -60,7 +60,9 @@ const UserSchema = new Schema({
 // Create models for each schema
 const UserModel = mongoose.model("User", UserSchema);
 const NeighborhoodModel = mongoose.model("Neighborhood", NeighborhoodSchema);
+
 const EventModel = mongoose.model("Event", EventSchema);
+
 
 
 // Export each model so they can be required elsewhere
@@ -68,4 +70,5 @@ module.exports = {
     UserModel: UserModel,
     NeighborhoodModel: NeighborhoodModel,
     EventModel: EventModel
+    
 }
