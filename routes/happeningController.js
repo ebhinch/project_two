@@ -125,7 +125,22 @@ router.get("/:happeningId", (request, response) => {
 
 
 //DELETE
+router.get("/:happeningId/delete", (request, response) => {
+    const neighborhoodId = request.params.neighborhoodId;
+    const happeningId = request.params.happeningId;
 
+    NeighborhoodModel.findById(neighborhoodId)
+        .then((neighborhood) => {
+            const happening = neighborhood.happenings.id(happeningId).remove()
+            return neighborhood.save()
+        })
+        .then(() => {
+            response.redirect(`/neighborhoods/${neighborhoodId}/happenings`)
+        })
+        .catch((error) => {
+            console.log(error)
+        })
+})
 
 
 module.exports = router
