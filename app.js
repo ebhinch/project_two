@@ -43,6 +43,9 @@ app.use("/neighborhoods", neighborhoodController);
 const userController = require("./routes/userController");
 app.use("/users", userController);
 
+const adminController = require("./routes/adminController");
+app.use("/admins", adminController);
+
 
 
 // catch 404 and forward to error handler

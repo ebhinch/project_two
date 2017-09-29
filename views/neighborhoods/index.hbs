@@ -1,18 +1,19 @@
 <div>
     <h1>NEIGHBORHOODS in LOCALIVING's DATABASE</h1>
 
-{{#each neighborhoods}}
+    {{!-- list all neighborhoods (by name) in database --}}
+    {{#each neighborhoods}}
     <div>
-    <a href="/neighborhoods/{{this._id}}/happenings">{{this.name}}</a>
+        <a href="/neighborhoods/{{this._id}}/happenings">{{this.name}}</a>
     </div>
-{{/each}}
+    {{/each}}
 
 
-
+    <h4>Users are not able to edit neighborhoods or them delete from the database. If you would like a neighborhood edited or deleted, please email us: <a href="">localiving@gmail.com</a> </h4>
 
 </div>
 
-    <h5>
-        <a href="/neighborhoods/new">Suggest a New Neighborhood</a>
-        <a href="/">Back to LOCALIVING's Homepage</a>
-    </h5>
+<h5>
+    <a href="/neighborhoods/new">Suggest a New Neighborhood</a>
+    <a href="/">Back to LOCALIVING's Homepage</a>
+</h5>

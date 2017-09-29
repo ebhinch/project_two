@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
 
+
 const HappeningSchema = new Schema ({
     name: {
         type: String,
@@ -41,7 +42,6 @@ const NeighborhoodSchema = new Schema({
     },
     happenings: [HappeningSchema]
 });
-
 const PendingNeighborhoodSchema = new Schema({
     name: {
         type: String,
