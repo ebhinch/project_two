@@ -40,8 +40,8 @@ app.use("/neighborhoods/:neighborhoodId/happenings", happeningController);
 const neighborhoodController = require("./routes/neighborhoodController");
 app.use("/neighborhoods", neighborhoodController);
 
-// const userController = require("./routes/userController");
-// app.use("/users", userController);
+const userController = require("./routes/userController");
+app.use("/users", userController);
 
 
 

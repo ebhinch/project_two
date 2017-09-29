@@ -110,7 +110,11 @@ const candlerParkFarmersMarket = new HappeningModel({
     image: ""
 })
 
-const users = [erica, victoria, tom];
+
+tom.save()
+erica.save()
+victoria.save()
+
 
 
 const neighborhoods = [cabbagetown, inmanPark, candlerPark];
