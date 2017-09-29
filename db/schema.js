@@ -40,19 +40,24 @@ const NeighborhoodSchema = new Schema({
         type: String,
         required: true
     },
-    happenings: [HappeningSchema]
-});
-const PendingNeighborhoodSchema = new Schema({
-    name: {
-        type: String,
-        required: true
-    },
-    location: {
-        type: String,
+    approved: {
+        type: Boolean,
         required: true
     },
     happenings: [HappeningSchema]
 });
+
+// const PendingNeighborhoodSchema = new Schema({
+//     name: {
+//         type: String,
+//         required: true
+//     },
+//     location: {
+//         type: String,
+//         required: true
+//     },
+//     happenings: [HappeningSchema]
+// });
 
 const UserSchema = new Schema({
     name: {
@@ -75,7 +80,7 @@ const UserSchema = new Schema({
 const UserModel = mongoose.model("User", UserSchema);
 const NeighborhoodModel = mongoose.model("Neighborhood", NeighborhoodSchema);
 const HappeningModel = mongoose.model("Happening", HappeningSchema);
-const PendingNeighborhoodModel = mongoose.model("Pending", PendingNeighborhoodSchema);
+// const PendingNeighborhoodModel = mongoose.model("Pending", PendingNeighborhoodSchema);
 
 
 
@@ -84,6 +89,6 @@ module.exports = {
     UserModel: UserModel,
     NeighborhoodModel: NeighborhoodModel,
     HappeningModel: HappeningModel,
-    PendingNeighborhoodModel: PendingNeighborhoodModel
+    // PendingNeighborhoodModel: PendingNeighborhoodModel
     
 }

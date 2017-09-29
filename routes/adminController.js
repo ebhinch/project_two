@@ -1,8 +1,10 @@
 const express = require('express')
 const router = express.Router({ mergeParams: true })
 
+
 const Schema = require("../db/schema.js");
-const PendingNeighborhoodModel = Schema.PendingNeighborhoodModel;
+const NeighborhoodModel = Schema.NeighborhoodModel;
+// const PendingNeighborhoodModel = Schema.PendingNeighborhoodModel;
 
 //INDEX
 
@@ -11,16 +13,16 @@ const PendingNeighborhoodModel = Schema.PendingNeighborhoodModel;
 //INDEX
 //happening index route
 router.get("/", (request, response) => {
-    PendingNeighborhoodModel.find({})
+    NeighborhoodModel.find({approved: false})
         .then((neighborhoods) => {
             response.render("admins/index", {
-               neighborhoods: neighborhoods
+                neighborhoods: neighborhoods
             })
         })
         .catch((error) => {
             console.log(error)
         })
-})
+    })
 
 module.exports = router;
 
@@ -31,3 +33,6 @@ module.exports = router;
 //     .then((neighborhoods) => {
 //         response.render("")
 //     })
+
+
+

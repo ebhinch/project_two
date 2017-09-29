@@ -25,7 +25,8 @@ router.get("/new", (request, response) => {
 //CREATE
 router.post("/", (request, response) => {
   const newNeighborhood = request.body;
-  PendingNeighborhoodModel.create(newNeighborhood)
+  newNeighborhood.approved = false;
+  NeighborhoodModel.create(newNeighborhood)
     .then(() => {
       response.redirect("/neighborhoods")
     })

@@ -37,32 +37,38 @@ UserModel.remove({}, function (err) {
 //neighborhoods
 const cabbagetown = new NeighborhoodModel({
     name: "Cabbagetown",
-    location: "Along Carrol Street"
+    location: "Along Carrol Street",
+    approved: true
 })
 
 const ponceyHighland = new NeighborhoodModel({
     name: "Poncey Highland",
-    location: "North Highland between Ponce and Freedom Parkway"
+    location: "North Highland between Ponce and Freedom Parkway",
+    approved: true
 })
 
 const inmanPark = new NeighborhoodModel({
     name: "Inman Park",
-    location: "Between Beltline and Edgewood"
+    location: "Between Beltline and Edgewood",
+    approved: true
 })
 
 const candlerPark = new NeighborhoodModel({
     name: "Candler Park",
-    location: "East of Little Five Points"
+    location: "East of Little Five Points",
+    approved: true
 })
 
 const decatur = new NeighborhoodModel({
     name: "Decatur",
-    location: "East of Druid Hills"
+    location: "East of Druid Hills",
+    approved: true
 })
 
 const virginiaHighland = new NeighborhoodModel({
     name: "Virginia-Highland",
-    location: "North Highland from Morningsie to Ponce de Leon Avenue"
+    location: "North Highland from Morningsie to Ponce de Leon Avenue",
+    approved: true
 })
 
 //users
@@ -175,7 +181,7 @@ blake.save()
 
 //assign neighborhoods and happenings to arrays by location
 const neighborhoods = [cabbagetown, inmanPark, candlerPark, decatur, ponceyHighland, virginiaHighland];
-const pendingNeighborhoods = [];
+// const pendingNeighborhoods = [];
 const cabbagetownHappenings = [chompAndStomp, yardSale];
 const inmanParkHappenings = [inmanParkRestoWeek, freedomFarmersMarket];
 const candlerParkHappenings = [candlerParkFarmersMarket];
@@ -194,7 +200,7 @@ candlerPark.save();
 decatur.happenings = decaturHappenings;
 decatur.save();
 
-pendingNeighborhoods.save() 
+// pendingNeighborhoods.save() 
 
 
 // Disconnect from database
