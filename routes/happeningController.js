@@ -71,6 +71,33 @@ router.get("/:happeningId/edit", (request, response) => {
 
 
 //UPDATE
+router.put("/:happeningId", (request, response) => {
+    console.log('Route hit!')
+    const neighborhoodId = request.params.neighborhoodId;
+    const happeningId = request.params.happeningId;
+    const updatedHappening = request.body;
+
+    NeighborhoodModel.findById(neighborhoodId)
+        .then((neighborhood) => {
+            const happening = neighborhood.happenings.id(happeningId)
+            happening.name = updatedHappening.name
+            happening.date = updatedHappening.date
+            happening.description = updatedHappening.description
+            happening.website = updatedHappening.website
+            happening.price = updatedHappening.price
+            happening.image = updatedHappening.image
+
+            return neighborhood.save()
+        })
+        .then(() => {
+            response.redirect(`/neighborhoods/${neighborhoodId}/happenings/${happeningId}`)
+        })
+        .catch((error) => {
+            console.log(error)
+        })
+})
+
+
 
 
 //SHOW
