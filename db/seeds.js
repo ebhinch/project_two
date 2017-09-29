@@ -35,6 +35,11 @@ const cabbagetown = new NeighborhoodModel({
     location: "Along Carrol Street"
 })
 
+const ponceyHighland = new NeighborhoodModel({
+    name: "Poncey Highland",
+    location: "North Highland between Ponce and Freedom Parkway"
+})
+
 const inmanPark = new NeighborhoodModel({
     name: "Inman Park",
     location: "Between Beltline and Edgewood"
@@ -43,6 +48,11 @@ const inmanPark = new NeighborhoodModel({
 const candlerPark = new NeighborhoodModel({
     name: "Candler Park",
     location: "East of Little Five Points"
+})
+
+const decatur = new NeighborhoodModel({
+    name: "Decatur",
+    location: "East of Druid Hills"
 })
 
 //users
@@ -64,6 +74,12 @@ const tom = new UserModel({
     home: "Edgewood"
 })
 
+const brandon = new UserModel({
+    name: "Brandon",
+    email: "brandon@gmail.com",
+    home: "Cabbagetown"
+})
+
 //happening
 const chompAndStomp = new HappeningModel({
     name: "Chomp and Stomp",
@@ -76,7 +92,7 @@ const chompAndStomp = new HappeningModel({
 
 const yardSale = new HappeningModel({
     name: "Cabbagetown Yard Sale",
-    date: (2017, 12, 01),
+    date: new Date("2017-10-13"),
     description: "End of year yard sale",
     website: "www.yardsale.com",
     price: 1,
@@ -85,7 +101,7 @@ const yardSale = new HappeningModel({
 
 const inmanParkRestoWeek = new HappeningModel({
     name: "Inman Park Restaurant Week",
-    date: (2017, 09, 30),
+    date: new Date("October 1, 2017"),
     description: "Annual restaurant week in Inman Park's favorite restaurants.",
     website: "www.inmanparkrestoweek.com",
     price: 50,
