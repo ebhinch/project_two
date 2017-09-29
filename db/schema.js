@@ -8,8 +8,13 @@ const HappeningSchema = new Schema ({
         required: true
     },
     date: {
-        type: Date,
+        type: String,
+        // type: Date, toUTCString or toISOString().substring
         required: true
+    },
+    time: {
+        type: String,
+        required: false
     },
     description: {
         type: String,
@@ -22,14 +27,22 @@ const HappeningSchema = new Schema ({
     price: {
         type: Number,
         required: false
-    },
-    image: {
-        type: String,
-        required: false
     }
 })
 
 const NeighborhoodSchema = new Schema({
+    name: {
+        type: String,
+        required: true
+    },
+    location: {
+        type: String,
+        required: true
+    },
+    happenings: [HappeningSchema]
+});
+
+const PendingNeighborhoodSchema = new Schema({
     name: {
         type: String,
         required: true
@@ -48,7 +61,8 @@ const UserSchema = new Schema({
     },
     email: {
         type: String,
-        required: true
+        required: true,
+        unique: true
     },
     home: {
         type: String,
@@ -60,8 +74,8 @@ const UserSchema = new Schema({
 // Create models for each schema
 const UserModel = mongoose.model("User", UserSchema);
 const NeighborhoodModel = mongoose.model("Neighborhood", NeighborhoodSchema);
-
 const HappeningModel = mongoose.model("Happening", HappeningSchema);
+const PendingNeighborhoodModel = mongoose.model("Pending", PendingNeighborhoodSchema);
 
 
 
@@ -69,6 +83,7 @@ const HappeningModel = mongoose.model("Happening", HappeningSchema);
 module.exports = {
     UserModel: UserModel,
     NeighborhoodModel: NeighborhoodModel,
-    HappeningModel: HappeningModel
+    HappeningModel: HappeningModel,
+    PendingNeighborhoodModel: PendingNeighborhoodModel
     
 }

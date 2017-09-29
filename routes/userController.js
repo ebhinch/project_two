@@ -3,6 +3,7 @@ const router = express.Router();
 
 const Schema = require("../db/schema.js");
 const UserModel = Schema.UserModel;
+const NeighborhoodModel = Schema.NeighborhoodModel;
 
 
 
@@ -43,8 +44,11 @@ router.get("/:userId", (request, response) => {
   //find user by id
   const userId = request.params.userId;
 
+
+
   UserModel.findById(userId)
     .then((user) => {
+      console.log(user)
       response.render("users/show", {
         user: user
       })
@@ -52,12 +56,22 @@ router.get("/:userId", (request, response) => {
     .catch((error) => {
       console.log(error)
   })
+
 })
-  
-  
-  module.exports = router;
+
+router.get("/:userId/delete", (request, response) => {
+  const userId = request.params.userId
+  UserModel.findByIdAndRemove(userId)
+    .then(() => {
+      response.redirect("/users")
+    })
+    .catch((error) => {
+      console.log(error)
+    })
+})
 
 
 
 
+module.exports = router;
 
