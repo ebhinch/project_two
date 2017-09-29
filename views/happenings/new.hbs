@@ -1,26 +1,32 @@
-<form action="/neighborhoods/{{neighborhoodId}}/happenings" method="POST">
+<div>
 
-    <label for="name">Name:</label>
-    <input type="text" name="name">
+    {{!-- add neighborhood name to h1 --}}
+    <h1>Submit a New Event to the Calendar</h1>
 
-    <label for="date">Date:</label>
-    <input type="date" name="date">
-    
-    <label for="description">Description: </label>
-    <input type="text" name="description">
-    
-    <label for="website">Website: </label>
-    <input type="text" name="website">
-    
-    <label for="price">Price: $</label>
-    <input type="number" name="price">
+    <form action="/neighborhoods/{{neighborhoodId}}/happenings" method="POST">
 
-    <input type="submit" value="Create New Event">
-    
-    {{!-- come back to this and fix image portion --}}
-    {{!-- <label for="image"></label> --}}    
+        <label for="name">Name:</label>
+        <input type="text" name="name">
+
+        <label for="date">Date:</label>
+        <input type="date" name="date">
+        
+        <label for="description">Description: </label>
+        <input type="text" name="description">
+        
+        <label for="website">Website: </label>
+        <input type="text" name="website">
+        
+        <label for="price">Price: $</label>
+        <input type="number" name="price">
+
+        <input type="submit" value="Create New Event">
+        
+        {{!-- come back to this and fix image portion --}}
+        {{!-- <label for="image"></label> --}}    
 
 
-</form>
+    </form>
 
 
+</div>

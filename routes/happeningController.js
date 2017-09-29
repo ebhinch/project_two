@@ -33,10 +33,23 @@ router.get("/new", (request, response) => {
 })
 
 
-
-
-
 //CREATE
+router.post("/", (request, response) => {
+    const neighborhoodId = request.params.neighborhoodId;
+    const newHappening = request.body;
+    NeighborhoodModel.findById(neighborhoodId)
+        .then((neighborhood) => {
+            neighborhood.happenings.push(newHappening)
+            return neighborhood.save()
+        })
+        .then((neighborhood) => {
+            response.redirect(`/neighborhoods/${neighborhoodId}/happenings`)
+        })
+        .catch((error) => {
+            console.log(error)
+        })
+})
+
 
 //EDIT
 
