@@ -5,16 +5,16 @@ const Schema = require("../db/schema.js");
 const NeighborhoodModel = Schema.NeighborhoodModel;
 
 
-//event index route
+//happening index route
 router.get("/", (request, response) => {
     //find neighborhood by id from the parameters
     const neighborhoodId = request.params.neighborhoodId;
 
     //use NeighborhoodModel to get respective neighborhoodId
     NeighborhoodModel.findById(neighborhoodId)
-        //THEN render the neighborhood & all the embedded event information
+        //THEN render the neighborhood & all the embedded happening information
         .then((neighborhood) => {
-            response.render("events/index", {
+            response.render("happenings/index", {
                 neighborhood: neighborhood
             })
         })
@@ -23,19 +23,19 @@ router.get("/", (request, response) => {
         })
 })
 
-//specific event show route
-router.get("/:eventId", (request, response) => {
+//specific happening show route
+router.get("/:happeningId", (request, response) => {
     //find the neighborhood by ID
     const neighborhoodId = request.params.neighborhoodId;
 
-    const eventId = request.params.eventId
+    const happeningId = request.params.happeningId;
         
-    //save specific event (by ID) to variable
+    //save specific happening (by ID) to variable
     NeighborhoodModel.findById(neighborhoodId)
         .then((neighborhood) => {
-            const event = neighborhood.events.id(eventId)
-            response.render("events/show", {
-                event: event,
+            const happening = neighborhood.happenings.id(happeningId)
+            response.render("happenings/show", {
+                happening: happening,
                 neighborhoodId: neighborhoodId
             })
         })

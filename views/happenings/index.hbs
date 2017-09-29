@@ -2,14 +2,14 @@
     <h1>Events in {{neighborhood.name}}</h1>
 
 
-    {{#each neighborhood.events}}
+    {{#each neighborhood.happenings}}
         <div>
             <div> {{this.image}} </div>   
  
-            <a href="/neighborhoods/{{../neighborhood._id}}/events/{{this._id}}">{{this.name}}</a>
+            <a href="/neighborhoods/{{../neighborhood._id}}/happenings/{{this._id}}">{{this.name}}</a>
             - {{this.date}}  
             
-            <a href="/neighborhoods/{{../neighborhood._id}}/events/{{this._id}}/edit">Edit Event</a>
+            <a href="/neighborhoods/{{../neighborhood._id}}/happenings/{{this._id}}/edit">Edit Event</a>
             
             {{!-- need to build url out --}}
             <a href="">Delete Event</a>

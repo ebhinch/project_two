@@ -21,14 +21,14 @@ const Schema = require("./schema.js");
 
 const NeighborhoodModel = Schema.NeighborhoodModel;
 const UserModel = Schema.UserModel;
-const EventModel = Schema.EventModel;
+const HappeningModel = Schema.HappeningModel;
 
 // Delete all Neighborhoods from the database
 NeighborhoodModel.remove({}, function (err) {
     console.log(err);
 });
 
-//Create seeded neighborhood, user, and event data
+//Create seeded neighborhood, user, and happening data
 //neighborhoods
 const cabbagetown = new NeighborhoodModel({
     name: "Cabbagetown",
@@ -64,8 +64,8 @@ const tom = new UserModel({
     home: "Edgewood"
 })
 
-//events
-const chompAndStomp = new EventModel({
+//happening
+const chompAndStomp = new HappeningModel({
     name: "Chomp and Stomp",
     date: new Date("2017-11-05T14:00:00"),
     description: "Annual chili festival",
@@ -74,7 +74,7 @@ const chompAndStomp = new EventModel({
     image: ""
 })
 
-const yardSale = new EventModel({
+const yardSale = new HappeningModel({
     name: "Cabbagetown Yard Sale",
     date: (2017, 12, 01),
     description: "End of year yard sale",
@@ -83,7 +83,7 @@ const yardSale = new EventModel({
     image: ""
 })
 
-const inmanParkRestoWeek = new EventModel({
+const inmanParkRestoWeek = new HappeningModel({
     name: "Inman Park Restaurant Week",
     date: (2017, 09, 30),
     description: "Annual restaurant week in Inman Park's favorite restaurants.",
@@ -92,7 +92,7 @@ const inmanParkRestoWeek = new EventModel({
     image: ""
 })
 
-const freedomFarmersMarket = new EventModel ({
+const freedomFarmersMarket = new HappeningModel ({
     name: "Freedom Farmers Market",
     date: (2017, 10, 6),
     description: "Weekly farmers market at Carter Center",
@@ -101,7 +101,7 @@ const freedomFarmersMarket = new EventModel ({
     image: ""
 })
 
-const candlerParkFarmersMarket = new EventModel({
+const candlerParkFarmersMarket = new HappeningModel({
     name: "Candler Park Farmer's Market",
     date: (2017, 10, 10),
     description: "weekly farmers market",
@@ -114,17 +114,17 @@ const users = [erica, victoria, tom];
 
 
 const neighborhoods = [cabbagetown, inmanPark, candlerPark];
-const cabbagetownEvents = [chompAndStomp, yardSale];
-const inmanParkEvents = [inmanParkRestoWeek, freedomFarmersMarket];
-const candlerParkEvents = [candlerParkFarmersMarket];
+const cabbagetownHappenings = [chompAndStomp, yardSale];
+const inmanParkHappenings = [inmanParkRestoWeek, freedomFarmersMarket];
+const candlerParkHappenings = [candlerParkFarmersMarket];
 
-cabbagetown.events = cabbagetownEvents;
+cabbagetown.happenings = cabbagetownHappenings;
 cabbagetown.save();
 
-inmanPark.events = inmanParkEvents;
+inmanPark.happenings = inmanParkHappenings;
 inmanPark.save();
 
-candlerPark.events = candlerParkEvents;
+candlerPark.happenings = candlerParkHappenings;
 candlerPark.save();
 
 

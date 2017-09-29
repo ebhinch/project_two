@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
 
-const EventSchema = new Schema ({
+const HappeningSchema = new Schema ({
     name: {
         type: String,
         required: true
@@ -38,7 +38,7 @@ const NeighborhoodSchema = new Schema({
         type: String,
         required: true
     },
-    events: [EventSchema]
+    happenings: [HappeningSchema]
 });
 
 const UserSchema = new Schema({
@@ -61,7 +61,7 @@ const UserSchema = new Schema({
 const UserModel = mongoose.model("User", UserSchema);
 const NeighborhoodModel = mongoose.model("Neighborhood", NeighborhoodSchema);
 
-const EventModel = mongoose.model("Event", EventSchema);
+const HappeningModel = mongoose.model("Happening", HappeningSchema);
 
 
 
@@ -69,6 +69,6 @@ const EventModel = mongoose.model("Event", EventSchema);
 module.exports = {
     UserModel: UserModel,
     NeighborhoodModel: NeighborhoodModel,
-    EventModel: EventModel
+    HappeningModel: HappeningModel
     
 }

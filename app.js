@@ -33,8 +33,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 const indexController = require("./routes/indexController");
 app.use("/", indexController);
 
-const eventController = require("./routes/eventController");
-app.use("/neighborhoods/:neighborhoodId/events", eventController);
+const happeningController = require("./routes/happeningController");
+app.use("/neighborhoods/:neighborhoodId/happenings", happeningController);
 
 const neighborhoodController = require("./routes/neighborhoodController");
 app.use("/neighborhoods", neighborhoodController);
