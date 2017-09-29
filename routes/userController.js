@@ -5,6 +5,8 @@ const Schema = require("../db/schema.js");
 const UserModel = Schema.UserModel;
 
 
+
+//INDEX
 router.get("/", (request, response) => {
   //find all users in database 
   UserModel.find({})
@@ -17,10 +19,44 @@ router.get("/", (request, response) => {
       console.log(error)
     })
 })
+
+//NEW
+router.get("/new", (request, response) => {
+  response.render("users/new")
+})
+
+//CREATE
+router.post("/", (request, response) => {
+  const newUser = request.body;
+  UserModel.create(newUser)
+    .then(() => {
+      response.redirect("/users")
+    })
+    .catch((error) => {
+      console.log(error)
+    })
+})
+
   
+//SHOW
+router.get("/:userId", (request, response) => {
+  //find user by id
+  const userId = request.params.userId;
+
+  UserModel.findById(userId)
+    .then((user) => {
+      response.render("users/show", {
+        user: user
+      })
+    })
+    .catch((error) => {
+      console.log(error)
+  })
+})
   
   
   module.exports = router;
+
 
 
 

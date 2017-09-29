@@ -4,7 +4,11 @@
     
     {{#each users}}
         <div>
-            <a href="">{{this.name}}</a>
+            <a href="/users/{{this.id}}">{{this.name}}</a>
+
+
+
+
         </div>
 
     {{/each}}
@@ -18,7 +22,7 @@
 </div>
 
     <h6>
-        <a href="">Create a New User</a>
+        <a href="/users/new">Create a New User</a>
         <a href="/">Back to LOCALIVING's Homepage</a>
         <a href="/neighborhoods">View LOCALIVING's Neighborhood Index</a>
     </h6>
