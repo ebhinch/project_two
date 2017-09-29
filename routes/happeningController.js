@@ -52,6 +52,23 @@ router.post("/", (request, response) => {
 
 
 //EDIT
+router.get("/:happeningId/edit", (request, response) => {
+    const neighborhoodId = request.params.neighborhoodId;
+    const happeningId = request.params.happeningId;
+
+    NeighborhoodModel.findById(neighborhoodId)
+        .then((neighborhood) => {
+            const happening = neighborhood.happenings.id(happeningId)
+            response.render("happenings/edit", {
+                happening: happening,
+                neighborhoodId: neighborhoodId
+            })
+        })
+        .catch((error) => {
+            console.log(error)
+        })
+})
+
 
 //UPDATE
 

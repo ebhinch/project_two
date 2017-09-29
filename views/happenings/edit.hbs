@@ -1,0 +1,29 @@
+<div>
+    {{!-- update to include event's name --}}
+    <h1>Update Event</h1> 
+
+    <form action="/neighborhoods/{{neighborhoodId}}/happenings/{{happening._id}}?_method=PUT" method="POST">
+   
+        <label for="name">Name:</label>
+        <input type="text" name="name" value="{{happening.name}}">
+
+        <label for="date">Date:</label>
+        <input type="date" name="date" value="{{happening.date}}">
+        
+        <label for="description">Description: </label>
+        <input type="text" name="description" value="{{happening.description}}">
+        
+        <label for="website">Website: </label>
+        <input type="text" name="website" value="{{happening.website}}">
+        
+        <label for="price">Price: $</label>
+        <input type="number" name="price" value="{{happening.price}}">
+
+        {{!-- add image here --}}
+
+        <input type="submit" value="Edit Event">
+    
+    </form>
+
+</div>
+
