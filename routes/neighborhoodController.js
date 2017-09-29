@@ -6,7 +6,7 @@ const PendingNeighborhoodModel = Schema.PendingNeighborhoodModel;
 
 router.get("/", (request, response) => {
 
-    NeighborhoodModel.find({})
+    NeighborhoodModel.find({approved: true})
       .then((neighborhoods) => {
         response.render("neighborhoods/index", {
           neighborhoods: neighborhoods

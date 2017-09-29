@@ -27,12 +27,3 @@ router.get("/", (request, response) => {
 module.exports = router;
 
 
-
-// use below (and expand) to show neighborhoods not approved
-// NeighborhoodModel.find({approved: false})
-//     .then((neighborhoods) => {
-//         response.render("")
-//     })
-
-
-
