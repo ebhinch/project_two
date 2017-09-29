@@ -28,7 +28,7 @@ router.get("/:eventId", (request, response) => {
     //find the neighborhood by ID
     const neighborhoodId = request.params.neighborhoodId;
 
-    const eventId = request.params.eventdId
+    const eventId = request.params.eventId
         
     //save specific event (by ID) to variable
     NeighborhoodModel.findById(neighborhoodId)

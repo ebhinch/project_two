@@ -67,7 +67,7 @@ const tom = new UserModel({
 //events
 const chompAndStomp = new EventModel({
     name: "Chomp and Stomp",
-    date: (2017, 11, 05),
+    date: new Date("2017-11-05T14:00:00"),
     description: "Annual chili festival",
     website: "www.chompandstomp.com",
     price: 25,
