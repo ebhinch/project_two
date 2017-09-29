@@ -4,7 +4,7 @@ const router = express.Router({ mergeParams: true })
 const Schema = require("../db/schema.js");
 const NeighborhoodModel = Schema.NeighborhoodModel;
 
-
+//INDEX
 //happening index route
 router.get("/", (request, response) => {
     //find neighborhood by id from the parameters
@@ -23,6 +23,27 @@ router.get("/", (request, response) => {
         })
 })
 
+
+//NEW
+router.get("/new", (request, response) => {
+    const neighborhoodId = request.params.neighborhoodId;
+    response.render("happenings/new", {
+        neighborhoodId: neighborhoodId
+    })
+})
+
+
+
+
+
+//CREATE
+
+//EDIT
+
+//UPDATE
+
+
+//SHOW
 //specific happening show route
 router.get("/:happeningId", (request, response) => {
     //find the neighborhood by ID
@@ -46,7 +67,7 @@ router.get("/:happeningId", (request, response) => {
 
 
 
-
+//DELETE
 
 
 
