@@ -35,41 +35,66 @@ UserModel.remove({}, function (err) {
 
 //Create seeded neighborhood, user, and happening data
 //neighborhoods
+
+
 const cabbagetown = new NeighborhoodModel({
     name: "Cabbagetown",
+    description: "Cabbagetown is a small neighborhood east just South of Inman Park. Listed on the U.S. National Register of Historic Places, the neighborhood was home to one of the South's first textile processing mills, the Fulton Bag and Cotton Mill. Today it is home to many young adults, art galleries, restaurants and shops.",
     location: "Along Carrol Street",
-    approved: true
-})
-
-const ponceyHighland = new NeighborhoodModel({
-    name: "Poncey Highland",
-    location: "North Highland between Ponce and Freedom Parkway",
-    approved: true
-})
-
-const inmanPark = new NeighborhoodModel({
-    name: "Inman Park",
-    location: "Between Beltline and Edgewood",
-    approved: true
+    approved: true,
+    image: "https://jacquelinemhadel.files.wordpress.com/2013/06/canon-pskrog-099.jpg"
 })
 
 const candlerPark = new NeighborhoodModel({
     name: "Candler Park",
-    location: "East of Little Five Points",
-    approved: true
+    description: "A quirky, largely residential neighborhood, Candler Park is an eclectic blend of the modern and historic. It is home to cafes, the quaint Candler Park Market, shops and the eponymous Candler Park, a 55-acre park.",
+    location: "East of Little Five Points and west of Lake Claire",
+    approved: true,
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTumgIrsDU0z00RmVE9OEJ1W0-2UPM8RSZ0Uh-v7Uwe0ddKVucbkQ"
 })
 
 const decatur = new NeighborhoodModel({
     name: "Decatur",
+    description:"Decatur is a city east of Atlanta where friendly neighbors, tree-lined streets, great schools, parks and playing fields, libraries, colleges, and businesses all make it a wonderful place to spend some time.",
     location: "East of Druid Hills",
-    approved: true
+    approved: true,
+    image: "http://atlhomesearch.com/images/City-of-Decatur-realtors.jpg"
+})
+
+
+const grantPark = new NeighborhoodModel({
+    name: "Grant Park",
+    description: "Grank Park is one of those neighborhoods that just feels like home. Located southeast of Downtown Atlanta, it's charcterized by Victorian-style architecture, little villages of local shops and restaurants, and the oldest park in the city.",
+    location: "East of Turner Field and west of Glenwood",
+    approved: true,
+    image: "http://d1marr3m5x4iac.cloudfront.net/images/edpborder500/I0-001/004/400/494-8.jpeg_/grant-park-94.jpeg"
+
+})
+
+const inmanPark = new NeighborhoodModel({
+    name: "Inman Park",
+    description: "Atlanta's first planned suburb, Inman Park is known now for its hip food scene, proximity to the Eastside BeltLine Trail, various parks, and the beautiful Victorian homes that first called it home.",
+    location: "Between Beltline and Edgewood",
+    approved: true,
+    image: "http://www.inmanparkrestaurantweek.com/wp-content/uploads/2014/03/hero-for-home1.jpg"
+})
+
+const ponceyHighland = new NeighborhoodModel({
+    name: "Poncey Highland",
+    description: "Named after the intersectin of Ponce de Leon Avenue and North Highland Avenue, Poncey-Highland is a small neighborhood situated between Virginia-Highland and Inman Park. It's home to many city landmarks such as the Clermont Lounge, the Carter Presidential Library and Center, Manuel's Tavern, and more.",
+    location: "North Highland between Ponce and Freedom Parkway",
+    approved: true,
+    image: "https://static1.squarespace.com/static/578585ba03596e712b579102/t/57d203abebbd1a73521b2849/1473381295893/"
 })
 
 const virginiaHighland = new NeighborhoodModel({
     name: "Virginia-Highland",
+    description: "Developed in the early 1900’s, Virginia-Highland, consists of four distinct commercial “villages” connected by short, walkable blocks lined with charming bungalow homes. The neighborhood’s name derives from the intersection of Virginia and Highland Avenues and has the feel of a small town within the heart of the city.",
     location: "North Highland from Morningsie to Ponce de Leon Avenue",
-    approved: true
+    approved: true,
+    image: "http://realty4atlanta.com/wp-content/uploads/2013/06/sign.jpg"
 })
+
 
 //users
 const erica = new UserModel({
@@ -115,11 +140,19 @@ const chloe = new UserModel({
 })
 
 //happening
+
+const grantParkFarmersMarket = new HappeningModel({
+    name: "Grant Park Farmer's Market",
+    date: "Sundays through December 17",
+    time: "9 a.m. to 1 p.m.",
+    description: "The Grant Park Farmers Market has been voted Best Farmers Market in Creative Loafing and Atlanta Magazine. Weekly free celebrity chef demonstrations at market feature the top chefs in the south including Hugh Acheson, Kevin Gillespie, Steven Satterfield, Virginia Willis and many more. Shoppers, foodies, bloggers, and critics all agree that the Grant Park Farmers Market is the place to be on Sunday mornings. The Grant Park Farmers Market is operated in partnership with the Grant Park Conservancy.",
+    website: "https://cfmatl.org/grantpark/"
+})
 const chompAndStomp = new HappeningModel({
-    name: "Chomp and Stomp",
+    name: "Chomp & Stomp Chili Cook-off and Bluegrass Festival",
     date: "November 4, 2017",
     time: "11 a.m.",
-    description: "Annual chili festival",
+    description: "An annual festival benefitting Cabbagetown parks, green spaces, and community center! In addition to the beloved chili cookoff, there's music, an artist market, and a 5K run. It's the tastiest, foot-stompin’est, MOST FUN fall festival in Atlanta!",
     website: "http://www.chompandstomp.com/",
     price: 25
 })
@@ -179,26 +212,35 @@ chloe.save()
 blake.save()
 
 
-//assign neighborhoods and happenings to arrays by location
-const neighborhoods = [cabbagetown, inmanPark, candlerPark, decatur, ponceyHighland, virginiaHighland];
 // const pendingNeighborhoods = [];
 const cabbagetownHappenings = [chompAndStomp, yardSale];
-const inmanParkHappenings = [inmanParkRestoWeek, freedomFarmersMarket];
 const candlerParkHappenings = [candlerParkFarmersMarket];
 const decaturHappenings = [decaturBookFestival];
+const grantParkHappenings = [grantParkFarmersMarket];
+const inmanParkHappenings = [inmanParkRestoWeek, freedomFarmersMarket];
+const ponceyHighlandHappenings = [];
+const virginiaHighlandHappenings = [];
 
 //save arrays
-cabbagetown.happenings = cabbagetownHappenings;
+
+//save all neighborhoods
 cabbagetown.save();
-
-inmanPark.happenings = inmanParkHappenings;
-inmanPark.save();
-
-candlerPark.happenings = candlerParkHappenings;
 candlerPark.save();
-
-decatur.happenings = decaturHappenings;
 decatur.save();
+grantPark.save();
+inmanPark.save();
+ponceyHighland.save();
+virginiaHighland.save();
+
+cabbagetown.happenings = cabbagetownHappenings;
+candlerPark.happenings = candlerParkHappenings;
+decatur.happenings = decaturHappenings;
+grantPark.happenings = grantParkHappenings;
+inmanPark.happenings = inmanParkHappenings;
+ponceyHighland.happenings = ponceyHighlandHappenings;
+virginiaHighland.happenings = virginiaHighlandHappenings;
+
+
 
 // pendingNeighborhoods.save() 
 

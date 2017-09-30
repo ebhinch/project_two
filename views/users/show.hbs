@@ -3,7 +3,7 @@
 <h1>{{user.name}}'s LOCALIVING Profile</h1>
 
 <h4>Name: {{user.name}}</h4>
-<h4>Email Address: {{user.email}}</h4>
+<h4>Email Address: <a href="mailto:{{user.email}}">{{user.email}}</a></h4>
 <h4>Home Neighborhood: {{user.home}}</h4>
 
 <a href="/users/{{user._id}}/delete">Delete Account</a>
