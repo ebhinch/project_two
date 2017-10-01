@@ -35,8 +35,6 @@ UserModel.remove({}, function (err) {
 
 //Create seeded neighborhood, user, and happening data
 //neighborhoods
-
-
 const cabbagetown = new NeighborhoodModel({
     name: "Cabbagetown",
     description: "Cabbagetown is a small neighborhood east just South of Inman Park. Listed on the U.S. National Register of Historic Places, the neighborhood was home to one of the South's first textile processing mills, the Fulton Bag and Cotton Mill. Today it is home to many young adults, art galleries, restaurants and shops.",
@@ -139,8 +137,7 @@ const chloe = new UserModel({
     home: "Poncey Highland"
 })
 
-//happening
-
+//happenings
 const grantParkFarmersMarket = new HappeningModel({
     name: "Grant Park Farmer's Market",
     date: "Sundays through December 17",
@@ -221,7 +218,6 @@ const inmanParkHappenings = [inmanParkRestoWeek, freedomFarmersMarket];
 const ponceyHighlandHappenings = [];
 const virginiaHighlandHappenings = [];
 
-//save arrays
 
 //save all neighborhoods
 cabbagetown.save();
@@ -232,6 +228,7 @@ inmanPark.save();
 ponceyHighland.save();
 virginiaHighland.save();
 
+//save arrays
 cabbagetown.happenings = cabbagetownHappenings;
 candlerPark.happenings = candlerParkHappenings;
 decatur.happenings = decaturHappenings;
@@ -240,9 +237,6 @@ inmanPark.happenings = inmanParkHappenings;
 ponceyHighland.happenings = ponceyHighlandHappenings;
 virginiaHighland.happenings = virginiaHighlandHappenings;
 
-
-
-// pendingNeighborhoods.save() 
 
 
 // Disconnect from database

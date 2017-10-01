@@ -1,9 +1,20 @@
+{{!-- pull in materialize to make background jumbotron div (eventually to set background image) --}}
+<div class="jumbotron">
+     
 
-<header>
-    <a href="/">Home</a>
-    <a href="/neighborhoods">Neighborhoods</a>
-    <a href="/users">Users</a>
-</header>
+  <nav>
+    {{!-- pull in materialize to make nav bar --}}
+    <div class="nav-wrapper  blue-grey">
+      <a href="#" class="brand-logo">Logo</a>
+      <ul id="nav-mobile" class="right ">
+        <li><a href="/">Home</a></li>
+        <li><a href="/neighborhoods">Neighborhoods</a></li>
+        <li><a href="/users">Users</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
 
 <div>
     <h1>welcome to</h1> 
@@ -19,3 +30,6 @@
     <a href="/admins">Admin</a>
 
 </footer>
+
+
+</div>

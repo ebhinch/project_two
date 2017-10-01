@@ -1,3 +1,6 @@
+ //happening controller will contain code for sites beginning with "/happenings". this is where all events and event detail will be shown
+
+
 const express = require('express')
 const router = express.Router({ mergeParams: true })
 
@@ -25,6 +28,7 @@ router.get("/", (request, response) => {
 
 
 //NEW
+//happening new route
 router.get("/new", (request, response) => {
     const neighborhoodId = request.params.neighborhoodId;
     response.render("happenings/new", {
@@ -34,6 +38,7 @@ router.get("/new", (request, response) => {
 
 
 //CREATE
+//happening create route
 router.post("/", (request, response) => {
     const neighborhoodId = request.params.neighborhoodId;
     const newHappening = request.body;
@@ -52,6 +57,7 @@ router.post("/", (request, response) => {
 
 
 //EDIT
+//happening edit route
 router.get("/:happeningId/edit", (request, response) => {
     const neighborhoodId = request.params.neighborhoodId;
     const happeningId = request.params.happeningId;
@@ -71,6 +77,7 @@ router.get("/:happeningId/edit", (request, response) => {
 
 
 //UPDATE
+//happening update route
 router.put("/:happeningId", (request, response) => {
     console.log('Route hit!')
     const neighborhoodId = request.params.neighborhoodId;
@@ -143,5 +150,6 @@ router.get("/:happeningId/delete", (request, response) => {
 })
 
 
-module.exports = router
+//always export router
 
+module.exports = router;

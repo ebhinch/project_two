@@ -6,3 +6,8 @@ body {
 a {
   color: #00B7FF;
 }
+
+
+.jumbotron {
+  background-image: "https://s-media-cache-ak0.pinimg.com/originals/26/25/c9/2625c99a534368beca200915d38a59d4.jpg";
+}

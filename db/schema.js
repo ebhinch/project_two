@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
 
-
+//define event schema
 const HappeningSchema = new Schema ({
     name: {
         type: String,
@@ -31,6 +31,7 @@ const HappeningSchema = new Schema ({
     }
 })
 
+//define neighborhood schema
 const NeighborhoodSchema = new Schema({
     name: {
         type: String,
@@ -55,18 +56,8 @@ const NeighborhoodSchema = new Schema({
     happenings: [HappeningSchema]
 });
 
-// const PendingNeighborhoodSchema = new Schema({
-//     name: {
-//         type: String,
-//         required: true
-//     },
-//     location: {
-//         type: String,
-//         required: true
-//     },
-//     happenings: [HappeningSchema]
-// });
 
+//define user schema
 const UserSchema = new Schema({
     name: {
         type: String,
@@ -81,7 +72,20 @@ const UserSchema = new Schema({
         type: String,
         required: true
     }
-})
+});
+
+// const PendingNeighborhoodSchema = new Schema({
+//     name: {
+//         type: String,
+//         required: true
+//     },
+//     location: {
+//         type: String,
+//         required: true
+//     },
+//     happenings: [HappeningSchema]
+// });
+
 
 
 // Create models for each schema
@@ -91,12 +95,10 @@ const HappeningModel = mongoose.model("Happening", HappeningSchema);
 // const PendingNeighborhoodModel = mongoose.model("Pending", PendingNeighborhoodSchema);
 
 
-
 // Export each model so they can be required elsewhere
 module.exports = {
     UserModel: UserModel,
     NeighborhoodModel: NeighborhoodModel,
     HappeningModel: HappeningModel,
     // PendingNeighborhoodModel: PendingNeighborhoodModel
-    
 }
