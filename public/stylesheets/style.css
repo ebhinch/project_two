@@ -7,7 +7,8 @@ body {
 }
 
 nav {
-  color: black
+  color: black;
+  /* margin-bottom: -20px; */
 }
 
 h1 {
@@ -80,12 +81,22 @@ hr {
   font-size: 16px;
 }
 
-a, h4 {
+a {
   margin: 10px;
 }
 
+a:hover{
+  color:#2e7d32
+}
+
+#view-link:hover{
+  color: white;
+}
+
 h4 {
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: heavy;
+  margin: 10px;
 }
 
 .user-intro-text {
@@ -95,8 +106,9 @@ h4 {
 #user-show-background{
   background-image: url("skyline.jpg");   
   background-size: cover;
-  height: 400px;
+  height: 600px;
   background-repeat: no-repeat;
+  margin-top: 0;
 }
 
 

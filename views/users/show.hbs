@@ -5,14 +5,14 @@
     <div class='user-show-text'>
 
         <h1>{{user.name}}'s LOCALIVING Profile</h1>
-        <br>
 
         <h3><span class="user-intro-text">Name: </span>{{user.name}}</h3>
         <h3><span class="user-intro-text">Email Address: </span><a href="mailto:{{user.email}}">{{user.email}}</a></h3>
-        <h3><span class="user-intro-text">Hsome Neighborhood: </span>{{user.home}}</h3>
+        <h3><span class="user-intro-text">Home Neighborhood: </span>{{user.home}}</h3>
 
-        <a href="/users/{{user._id}}/delete">Delete Account</a>
-        <h4>Curious about events in your neighborhood? <a href="/neighborhoods">Visit our Neighborhood Index</a></h4>
+    <a href="/users/{{user._id}}/delete">Delete Account</a>
+        <br><br>
+        <h4>Curious about your neighborhood? <a id="view-link" href="/neighborhoods">View Neighborhood Index</a></h4>
 
     </div>
     </div>
