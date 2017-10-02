@@ -3,6 +3,7 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;   
+
 }
 
 nav {
@@ -26,8 +27,9 @@ h2 {
 }
 
 main {
-  /* height: 1000px; */
   flex: 1 0 auto;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .topH1 {
@@ -61,10 +63,15 @@ hr {
   align-items: center;
 }
 
-/* .parallax-container{
-  position: relative;  
- }
- 
- .parallax img{
-   display: inherit !important;
- } */
+.neighborhood-header{
+  width: 100%;
+}
+
+.intro-text{
+  color:#2e7d32 ;
+  font-weight: bold;
+}
+
+#happening-list {
+  font-size: 18px;
+}

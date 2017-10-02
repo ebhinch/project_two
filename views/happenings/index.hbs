@@ -1,21 +1,25 @@
+<main>
 <div>
-    <h1>{{neighborhood.name}}</h1>
 
-    <h3>About {{neighborhood.name}}: {{neighborhood.description}}</h3>
-    <h3>Located {{neighborhood.location}}</h3>
+    <img class="neighborhood-header" src="{{neighborhood.image}}">
 
-    <h2>Events in {{neighborhood.name}}</h2>
+    <h2><span class="intro-text">About {{neighborhood.name}}:</span> {{neighborhood.description}}</h2>
+    <h2><span class="intro-text">Located: </span>{{neighborhood.location}}</h2>
+
+    <h2 class="intro-text">Events in {{neighborhood.name}}:</h2>
 
 
     {{#each neighborhood.happenings}}
         <div>
-            <a href="/neighborhoods/{{../neighborhood._id}}/happenings/{{this._id}}">{{this.name}}</a>
-            - {{this.date}}  
+            <ul>
+            <li id="happening-list"><a href="/neighborhoods/{{../neighborhood._id}}/happenings/{{this._id}}">{{this.name}}</a>
+            - {{this.date}}</li>  
+            </ul>
+
         </div>        
     {{/each}}
 
     <br>
-     <img src="{{neighborhood.image}}" height="250">
 
     <h5>
         <a href="/neighborhoods/{{neighborhood._id}}/happenings/new">Submit a New {{neighborhood.name}} Event</a>
@@ -25,3 +29,4 @@
     </h5>
 
 </div>
+</main>
