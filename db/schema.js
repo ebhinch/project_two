@@ -71,6 +71,10 @@ const UserSchema = new Schema({
     home: {
         type: String,
         required: true
+    },
+    admin: {
+        type: Boolean,
+        required: true
     }
 });
 

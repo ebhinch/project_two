@@ -1,11 +1,24 @@
+<main>
 <h2>Welcome Admin! Below are neighborhoods pending approval. Please review and approve if valid.</h2>
 {{#each neighborhoods}}
     <div>
-        <strong>Name: </strong>{{this.name}}
-        <strong>Location: </strong>{{this.location}}
-        <button onclick="neighborhood.approved = true">Approve Neighborhood</button>
-               {{!-- add functionality that makes "approved" boolean flip to "true" and neighborhood post to neighborhood index when button is clicked --}}
+        <h3><span class="intro-text">Name: </span>{{this.name}}</h3>
+        <h3><span class="intro-text">Location: </span>{{this.location}}</h3>
+        <h3><span class="intro-text">Description: </span>{{this.description}}</h3>
+        <h3><span class="intro-text">Image: </span>{{this.image}}</h3>
+
+        <form action="/admins/{{this._id}}?_method=PUT" method="POST">
+            <button type="submit">Approve Neighborhood</button>
+        </form>
+
+        <form action="/admins/{{this._id}}?_method=DELETE" method="GET">
+            <button type="submit">Reject Neighborhood</button>
+        </form>
+        
+
+
     </div>
 
 
 {{/each}}
+</main>

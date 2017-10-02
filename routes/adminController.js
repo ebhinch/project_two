@@ -11,7 +11,7 @@ const NeighborhoodModel = Schema.NeighborhoodModel;
 //INDEX
 //happening index route
 router.get("/", (request, response) => {
-    NeighborhoodModel.find({approved: false})
+    NeighborhoodModel.find({ approved: false })
         .then((neighborhoods) => {
             response.render("admins/index", {
                 neighborhoods: neighborhoods
@@ -20,9 +20,38 @@ router.get("/", (request, response) => {
         .catch((error) => {
             console.log(error)
         })
-    })
+})
+
+//approve route
+router.put("/:neighborhoodId", (request, response) => {
+    const neighborhoodId = request.params.neighborhoodId;
+
+    NeighborhoodModel.findById(neighborhoodId)
+        .then((neighborhood) => {
+            neighborhood.approved = true
+            return neighborhood.save()
+        })
+        .then(() => {
+            response.redirect(`/neighborhoods`)
+        })
+        .catch((error) => {
+            console.log(error)
+        })
+})
+
+
+//reject route
+router.get("/:neighborhoodId", (request, response) => {
+    const neighborhoodId = request.params.neighborhoodId;
+    NeighborhoodModel.findByIdAndRemove(neighborhoodId)
+        .then(() => {
+            response.redirect("/")
+        })
+        .catch((error) => {
+            console.log(error)
+        })
+})
+
 
 //always export router
 module.exports = router;
-
-

@@ -59,6 +59,7 @@ router.get("/:userId", (request, response) => {
 
 })
 
+//DELETE
 router.get("/:userId/delete", (request, response) => {
   const userId = request.params.userId
   UserModel.findByIdAndRemove(userId)
