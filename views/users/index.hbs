@@ -1,18 +1,21 @@
 <div>
+    <br>
     <h1>LOCALIVING's Registered Users</h1>
+    <br>
+
+
 
     {{#each users}}
         <div>
-            <a href="/users/{{this.id}}">{{this.name}}</a>
+            <ul>
+                <li id="user-list"><i class="material-icons">account_box</i><a href="/users/{{this.id}}">{{this.name}}</a>
+                </li>
+            </ul>
         </div>
-
     {{/each}}
 
 
     <div>
         <br>
-       <a href="/users/new">Create a New User</a> 
-       <br> <br>
-        <a href="/">Back to LOCALIVING's Homepage</a> - 
-        <a href="/neighborhoods">View LOCALIVING's Neighborhood Index</a>
+        <a href="/users/new">Create a New User</a> 
     </div>

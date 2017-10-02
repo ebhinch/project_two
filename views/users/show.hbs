@@ -1,21 +1,19 @@
-<div>
+<main>
 
-<h1>{{user.name}}'s LOCALIVING Profile</h1>
+    <br>
+    <div id="user-show-background">
+    <div class='user-show-text'>
 
-<h4>Name: {{user.name}}</h4>
-<h4>Email Address: <a href="mailto:{{user.email}}">{{user.email}}</a></h4>
-<h4>Home Neighborhood: {{user.home}}</h4>
+        <h1>{{user.name}}'s LOCALIVING Profile</h1>
+        <br>
 
-<a href="/users/{{user._id}}/delete">Delete Account</a>
-<h4>Curious about events in your neighborhood? <a href="/neighborhoods">Visit our Neighborhood Index</a></h4>
-<a href="/">LOCALIVING's Homepage</a>
+        <h3><span class="user-intro-text">Name: </span>{{user.name}}</h3>
+        <h3><span class="user-intro-text">Email Address: </span><a href="mailto:{{user.email}}">{{user.email}}</a></h3>
+        <h3><span class="user-intro-text">Hsome Neighborhood: </span>{{user.home}}</h3>
 
+        <a href="/users/{{user._id}}/delete">Delete Account</a>
+        <h4>Curious about events in your neighborhood? <a href="/neighborhoods">Visit our Neighborhood Index</a></h4>
 
-
-
-</div>
-
-
-
-
-{{!-- mongoose.findby --}}
+    </div>
+    </div>
+</main>

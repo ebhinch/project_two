@@ -231,7 +231,9 @@ virginiaHighland.happenings = virginiaHighlandHappenings;
 
 const users = [tom, erica, victoria, brandon, heather, chloe, blake];
 
-const neighborhoods = [ponceyHighland, virginiaHighland, cabbagetown, candlerPark, decatur, grantPark, inmanPark]
+const neighborhoods = [ponceyHighland, virginiaHighland, cabbagetown, candlerPark, decatur, grantPark, inmanPark];
+neighborhoods.sort();
+users.sort();
 //save all neighborhoods
 
 UserModel.remove({})
