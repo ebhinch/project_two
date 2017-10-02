@@ -3,7 +3,7 @@ require('dotenv').config();
 // Database setup
 const mongoose = require('mongoose');
 
-mongoose.connect(process.env.MONGODB_URI)
+mongoose.connect(process.env.MONGODB_URI, {useMongoClient: true})
 const db = mongoose.connection;
 
 
@@ -24,14 +24,7 @@ const UserModel = Schema.UserModel;
 const HappeningModel = Schema.HappeningModel;
 
 // Delete all Neighborhoods from the database
-NeighborhoodModel.remove({}, function (err) {
-    console.log(err);
-});
 
-// Delete all Users from the database
-UserModel.remove({}, function (err) {
-    console.log(err);
-});
 
 //Create seeded neighborhood, user, and happening data
 //neighborhoods
@@ -241,10 +234,19 @@ const users = [tom, erica, victoria, brandon, heather, chloe, blake];
 const neighborhoods = [ponceyHighland, virginiaHighland, cabbagetown, candlerPark, decatur, grantPark, inmanPark]
 //save all neighborhoods
 
-
-UserModel.insertMany(users)
+UserModel.remove({})
+    .then(() => {
+        return UserModel.insertMany(users)
+    })
+    .then(() => {
+        console.log('Users saved!')
+        return NeighborhoodModel.remove({})
+    })
     .then(() => {
         return NeighborhoodModel.insertMany(neighborhoods)
+    })
+    .then(() => {
+        console.log('Neighborhoods saved!')
     })
     .catch((error) => {
         console.log(error);

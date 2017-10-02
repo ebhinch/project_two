@@ -26,9 +26,8 @@ h2 {
 }
 
 main {
-  height: 1000px;
+  /* height: 1000px; */
   flex: 1 0 auto;
-
 }
 
 .topH1 {
@@ -53,17 +52,6 @@ hr {
   margin-top: 10px;
 }
 
-.parallax-container{
-  position: relative;
-  overflow: hidden;
-  height: 700px;
-}
-.parallax img{
-  width: auto;
-  height: 100%;
-  display: inherit !important;
-}
-
 .neighborhood-panel{
   height: 600px;
   display: flex;
@@ -72,25 +60,11 @@ hr {
   flex-wrap: wrap;
   align-items: center;
 }
-/* 
-#projects {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  align-items: center;
-}
 
-.thumbnail-caption {
-  font-size: 14px;
-  text-align: center;
-  letter-spacing: 2px;
-}
-
-.thumbnail {
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-block-end: 10px;
-  margin-top: 5px;
-  
-} */
+/* .parallax-container{
+  position: relative;  
+ }
+ 
+ .parallax img{
+   display: inherit !important;
+ } */
