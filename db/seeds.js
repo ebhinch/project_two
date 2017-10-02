@@ -198,15 +198,23 @@ const decaturBookFestival = new HappeningModel({
     price: 15
 })
 
+const sabChineseNewYear = new HappeningModel({
+    name: "Sweet Auburn Barbecue Chinese New Year Pop-Up",
+    date: "February 15, 2018",
+    time: "9 p.m.",
+    description: "adsfasd",
+    website: "www.sweetauburnbbq.com",
+    price: 15
+})
 
-//save all users
-tom.save()
-erica.save()
-victoria.save()
-brandon.save()
-heather.save()
-chloe.save()
-blake.save()
+const murphysTreeLighting = new HappeningModel({
+    name: "Murphy's 11th Annual Christmas Tree Lighting",
+    date: "December 7, 2017",
+    time: "6:30 p.m.",
+    description:"asdfasd",
+    website: "www.murphysatl.com",
+    price: 5
+})
 
 
 // const pendingNeighborhoods = [];
@@ -215,18 +223,9 @@ const candlerParkHappenings = [candlerParkFarmersMarket];
 const decaturHappenings = [decaturBookFestival];
 const grantParkHappenings = [grantParkFarmersMarket];
 const inmanParkHappenings = [inmanParkRestoWeek, freedomFarmersMarket];
-const ponceyHighlandHappenings = [];
-const virginiaHighlandHappenings = [];
+const ponceyHighlandHappenings = [sabChineseNewYear];
+const virginiaHighlandHappenings = [murphysTreeLighting];
 
-
-//save all neighborhoods
-cabbagetown.save();
-candlerPark.save();
-decatur.save();
-grantPark.save();
-inmanPark.save();
-ponceyHighland.save();
-virginiaHighland.save();
 
 //save arrays
 cabbagetown.happenings = cabbagetownHappenings;
@@ -237,7 +236,19 @@ inmanPark.happenings = inmanParkHappenings;
 ponceyHighland.happenings = ponceyHighlandHappenings;
 virginiaHighland.happenings = virginiaHighlandHappenings;
 
+const users = [tom, erica, victoria, brandon, heather, chloe, blake];
+
+const neighborhoods = [ponceyHighland, virginiaHighland, cabbagetown, candlerPark, decatur, grantPark, inmanPark]
+//save all neighborhoods
 
 
-// Disconnect from database
-db.close();
+UserModel.insertMany(users)
+    .then(() => {
+        return NeighborhoodModel.insertMany(neighborhoods)
+    })
+    .catch((error) => {
+        console.log(error);
+    })
+    .then(() => {
+        db.close()
+    })

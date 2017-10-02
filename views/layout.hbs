@@ -1,13 +1,57 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>{{title}}</title>
-      {{!-- link materialize --}}
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-      {{!-- link own style sheet --}}
-     <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    {{{body}}}
-  </body>
+
+<head>
+  <title>{{title}}</title>
+  {{!-- link materialize --}}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css"> {{!-- link own style sheet --}}
+  <link rel='stylesheet' href='/stylesheets/style.css' /> {{!-- link google fonts --}}
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+
+
+  <nav class="top-nav green lighten-5" id="nav-bar">
+    <div class="container">
+      <ul class="right">
+        <li><a href="/" class="black-text">Home</a></li>
+        <li><a href="/neighborhoods" class="black-text">Neighborhoods</a></li>
+        <li><a href="/users" class="black-text">Users</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+  {{{body}}}
+
+
+
+
+  <footer class="page-footer green lighten-5">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h6 class="black-text">LOCALIVIN established 10.3.2017</h6>
+        </div>
+        <div class="col l4 offset-l2 s12">
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        © 2017 LOCALIVING COPYRIGHT
+      </div>
+    </div>
+  </footer>
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+</body>
+
 </html>
