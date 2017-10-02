@@ -1,12 +1,5 @@
 body {
-  font-family: 'Roboto Condensed', sans-serif;     
-}
-
-.jumbotron {
-  background-image: url("https://traveler.marriott.com/wp-content/uploads/2017/07/Atlanta_PiedmontPark.jpg");
-  background-repeat: no-repeat;
-  color: white;
-  width: auto;
+  font-family: 'Roboto Condensed', sans-serif;    
 }
 
 nav {
@@ -16,6 +9,8 @@ nav {
 h1 {
   font-size: 28px;
   margin: 10px;
+  margin-top: 0px;
+  padding-top: 10px;
 }
 
 h3 {
@@ -28,6 +23,7 @@ h2 {
 
 main {
   height: 1000px;
+
 }
 
 .topH1 {
@@ -39,3 +35,4 @@ main {
   font-weight: bold;
 
 }
+
