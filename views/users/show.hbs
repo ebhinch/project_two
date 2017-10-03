@@ -2,17 +2,17 @@
 
     <br>
     <div id="user-show-background">
-    <div class='user-show-text'>
+    <div>
 
-        <h1>{{user.name}}'s LOCALIVING Profile</h1>
+        <h1 class="user-show-title">{{user.name}}'s LOCALIVING Profile</h1>
 
         <h3><span class="user-intro-text">Name: </span>{{user.name}}</h3>
         <h3><span class="user-intro-text">Email Address: </span><a href="mailto:{{user.email}}">{{user.email}}</a></h3>
         <h3><span class="user-intro-text">Home Neighborhood: </span>{{user.home}}</h3>
 
-    <a href="/users/{{user._id}}/delete">Delete Account</a>
-        <br><br>
-        <h4>Curious about your neighborhood? <a id="view-link" href="/neighborhoods">View Neighborhood Index</a></h4>
+        <br>
+        <h3 class="user-show-link">Curious about your neighborhood? <br><a id="view-link" href="/neighborhoods">View Neighborhood Index</a></h3>
+        <a class="delete-link" href="/users/{{user._id}}/delete">Delete Account</a>
 
     </div>
     </div>

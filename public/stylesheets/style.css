@@ -2,13 +2,13 @@ body {
   font-family: 'Roboto Condensed', sans-serif; 
   display: flex;
   min-height: 100vh;
-  flex-direction: column;   
-
+  flex-direction: column; 
 }
 
 nav {
   color: black;
-  /* margin-bottom: -20px; */
+  margin: 0;
+  padding: 0;
 }
 
 h1 {
@@ -18,19 +18,25 @@ h1 {
   padding-top: 10px;
 }
 
+h2 {
+  font-size: 23px;
+  margin-left: 5px;
+}
+
 h3 {
   font-size: 18px;
   margin: 10px;
 }
 
-h2 {
-  font-size: 23px;
+h4 {
+  font-size: 16px;
+  font-weight: heavy;
+  margin: 10px;
 }
 
 main {
   flex: 1 0 auto;
-  padding-left: 5px;
-  padding-right: 5px;
+
 }
 
 .topH1 {
@@ -47,21 +53,22 @@ main {
   margin-right: 5px;
 }
 
-.page-footer {
-  padding-bottom: 5px;
-}
-
 hr {
   margin-top: 10px;
 }
 
 .neighborhood-panel {
-  height: 600px;
-  display: flex;
+  /* height: 600px; */
+  /* display: flex;
   flex-direction: row;
   justify-content: flex-start;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: center; */
+  display: block;
+  border-radius: 2px 2px 0 0;
+  position: relative;
+  width: 100%;
+  height: 600px;
 }
 
 .neighborhood-header{
@@ -77,26 +84,21 @@ hr {
   font-size: 18px;
 }
 
-#user-list {
+#user-list, #create-user {
   font-size: 16px;
-}
-
-a {
   margin: 10px;
 }
+
+/* a {
+  margin: 10px;
+} */
 
 a:hover{
   color:#2e7d32
 }
 
 #view-link:hover{
-  color: white;
-}
-
-h4 {
-  font-size: 16px;
-  font-weight: heavy;
-  margin: 10px;
+  color: black;
 }
 
 .user-intro-text {
@@ -111,4 +113,28 @@ h4 {
   margin-top: 0;
 }
 
+.section {
+  padding: 0;
+}
 
+#footer-text {
+  margin-bottom: 5px;
+}
+
+.user-show-title {
+  text-shadow: 2px 2px #616161 ;
+}
+
+/* .user-show-link, .delete-link {
+  text-shadow: 1px 1px #616161 ;
+} */
+
+.delete-link {
+  font-weight: bold;
+  font-size: 18px;
+  margin: 10px;
+}
+
+.delete-link:hover {
+  color: black;
+}
