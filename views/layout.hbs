@@ -24,16 +24,19 @@
 
 <body>
 
+{{!-- set up nav bar for computer and mobile --}}
   <nav>
     <div class="nav-wrapper blue lighten-3">
       <a href="/" class="brand-logo black-text">LOCALIVIN</a>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons"> <i class="material-icons">menu</i></i></a>
+      
       <ul class="right hide-on-med-and-down">
         <li><a href="/" class="black-text">Home</a></li>
         <li><a href="/neighborhoods" class="black-text">Neighborhoods</a></li>
         <li><a href="/users" class="black-text">Users</a></li>
         <li><a href="/admins" class="black-text">Admin</a></li>
       </ul>
+
       <ul class="side-nav" id="mobile-demo">
         <li><a href="/" class="black-text">Home</a></li>
         <li><a href="/neighborhoods" class="black-text">Neighborhoods</a></li>
@@ -47,16 +50,18 @@
   {{{body}}}
 
 
-
+{{!-- set up footer --}}
   <footer class="page-footer white-text blue lighten-3">
       <div class="container">
       © 2017 Copyright Text. LOCALIVIN
       </div>
   </footer>
 
+  {{!-- bring in materialize cdn --}}
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  
+  {{!-- bring in own main.js --}}
   <script src="/javascripts/main.js"></script>
 
 </body>
-
 </html>

@@ -1,33 +1,27 @@
 <main>
-<div>
+    <div>
 
-    <img class="neighborhood-header" src="{{neighborhood.image}}">
+        <img class="neighborhood-header" src="{{neighborhood.image}}">
 
-    <h2 class="intro-text">Events in {{neighborhood.name}}:</h2>
+        <h2 class="intro-text">Events in {{neighborhood.name}}:</h2>
 
-
-    {{#each neighborhood.happenings}}
+        {{#each neighborhood.happenings}}
         <div>
             <ul>
-            <li id="happening-list"><a href="/neighborhoods/{{../neighborhood._id}}/happenings/{{this._id}}">{{this.name}}</a>
-            - {{this.date}}</li>  
+                <li id="happening-list"><a href="/neighborhoods/{{../neighborhood._id}}/happenings/{{this._id}}">{{this.name}}</a> - {{this.date}}</li>
             </ul>
+        </div>
+        {{/each}}
 
-        </div>        
-    {{/each}}
+        <h2><span class="intro-text">About {{neighborhood.name}}:</span> {{neighborhood.description}}</h2>
+        <h2><span class="intro-text">Located: </span>{{neighborhood.location}}</h2>
+        <br>
 
-    <h2><span class="intro-text">About {{neighborhood.name}}:</span> {{neighborhood.description}}</h2>
-    <h2><span class="intro-text">Located: </span>{{neighborhood.location}}</h2>
+        <h5>
+            <a href="/neighborhoods/{{neighborhood._id}}/happenings/new">Submit a New {{neighborhood.name}} Event</a>
+            <a href="/neighborhoods">Back to Neighborhoods List</a>
+            <a href="/">Home</a>
+        </h5>
 
-
-    <br>
-
-    <h5>
-        <a href="/neighborhoods/{{neighborhood._id}}/happenings/new">Submit a New {{neighborhood.name}} Event</a>
-        <a href="/neighborhoods">Back to Neighborhoods List</a>
-        <a href="/">Home</a>
-
-    </h5>
-
-</div>
+    </div>
 </main>
