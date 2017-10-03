@@ -72,7 +72,7 @@ const inmanPark = new NeighborhoodModel({
 
 const ponceyHighland = new NeighborhoodModel({
     name: "Poncey Highland",
-    description: "Named after the intersectin of Ponce de Leon Avenue and North Highland Avenue, Poncey-Highland is a small neighborhood situated between Virginia-Highland and Inman Park. It's home to many city landmarks such as the Clermont Lounge, the Carter Presidential Library and Center, Manuel's Tavern, and more.",
+    description: "Named after the intersection of Ponce de Leon Avenue and North Highland Avenue, Poncey-Highland is a small neighborhood situated between Virginia-Highland and Inman Park. It's home to many city landmarks such as the Clermont Lounge, the Carter Presidential Library and Center, Manuel's Tavern, and more.",
     location: "North Highland between Ponce and Freedom Parkway",
     approved: true,
     image: "https://static1.squarespace.com/static/578585ba03596e712b579102/t/57d203abebbd1a73521b2849/1473381295893/"
