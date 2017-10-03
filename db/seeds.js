@@ -86,7 +86,6 @@ const virginiaHighland = new NeighborhoodModel({
     image: "http://realty4atlanta.com/wp-content/uploads/2013/06/sign.jpg"
 })
 
-
 //users
 const erica = new UserModel({
     name: "Erica",
@@ -138,6 +137,15 @@ const grantParkFarmersMarket = new HappeningModel({
     description: "The Grant Park Farmers Market has been voted Best Farmers Market in Creative Loafing and Atlanta Magazine. Weekly free celebrity chef demonstrations at market feature the top chefs in the south including Hugh Acheson, Kevin Gillespie, Steven Satterfield, Virginia Willis and many more. Shoppers, foodies, bloggers, and critics all agree that the Grant Park Farmers Market is the place to be on Sunday mornings. The Grant Park Farmers Market is operated in partnership with the Grant Park Conservancy.",
     website: "https://cfmatl.org/grantpark/"
 })
+
+const pupCultureFestival = new HappeningModel({
+    name: "2017 Pup Culture Fest",
+    date: "November 4, 2017",
+    time: "11 a.m. to 6 p.m.",
+    description: "An event for dogs and the owners that love them!",
+    website: "http://pupculturefest.com/"
+})
+
 const chompAndStomp = new HappeningModel({
     name: "Chomp & Stomp Chili Cook-off and Bluegrass Festival",
     date: "November 4, 2017",
@@ -152,7 +160,7 @@ const yardSale = new HappeningModel({
     date: "October 13, 2017",
     time: "9:30 a.m.",
     description: "End of year yard sale",
-    website: "www.yardsale.com",
+    website: "https://www.yardsale.com",
     price: 1
 })
 
@@ -160,16 +168,16 @@ const inmanParkRestoWeek = new HappeningModel({
     name: "Inman Park Restaurant Week",
     date: "October 1, 2017",
     description: "Annual restaurant week in Inman Park's favorite restaurants.",
-    website: "www.inmanparkrestoweek.com",
+    website: "http://www.inmanparkrestaurantweek.com/",
     price: 50
 })
 
 const freedomFarmersMarket = new HappeningModel ({
     name: "Freedom Farmers Market",
-    date: "October 7, 2017",
+    date: "Saturdays all year",
     time: "9 a.m.",
     description: "Weekly farmers market at Carter Center",
-    website: "www.freedomfarmersmarket.com",
+    website: "http://www.freedomfarmersmkt.org/",
     price: 3
 })
 
@@ -178,7 +186,7 @@ const candlerParkFarmersMarket = new HappeningModel({
     date: "October 8, 2017",
     time: "8 a.m.",
     description: "weekly farmers market",
-    website: "www.candlerparkfarmersmarket.com",
+    website: "https://www.candlerparkfarmersmarket.com",
     price: 10
 })
 
@@ -195,8 +203,8 @@ const sabChineseNewYear = new HappeningModel({
     name: "Sweet Auburn Barbecue Chinese New Year Pop-Up",
     date: "February 15, 2018",
     time: "9 p.m.",
-    description: "adsfasd",
-    website: "www.sweetauburnbbq.com",
+    description: "The Year of the Dog is upon us, and so is another fantastic night of festivities at Sweet Auburn. The Hsu family and Sweet Auburn staff are excited to celebrate with a pop-up Chinese menu, drink specials, live Lion Dancers an exclusive beer from Monday Night Brewing and more.",
+    website: "https://www.sweetauburnbbq.com",
     price: 15
 })
 
@@ -204,19 +212,48 @@ const murphysTreeLighting = new HappeningModel({
     name: "Murphy's 11th Annual Christmas Tree Lighting",
     date: "December 7, 2017",
     time: "6:30 p.m.",
-    description:"asdfasd",
-    website: "www.murphysatl.com",
+    description:"Come Celebrate the beginning of the holiday season with Murphy's exciting Christmas Tree Lighting. The Georgia Boys Choir will be singing beautiful and inspirational Christmas Carols and Santa Clause will make a special appearance.",
+    website: "https://www.murphysatl.com",
     price: 5
 })
+
+const grilledCheeseFestival = new HappeningModel({
+    name: "Atlanta Grilled CHeese Festival",
+    date: "October 7, 2017",
+    time: "12 p.m.",
+    description: "Restaurants from all over Atlanta will be serving up bites of melty, cheesy, goodness all day long for your tasting pleasure! Try a few, or try them all and cast your vote for Best Grilled Cheese in Atlanta! In addition to a full day of delicious eats, we've got an awesome lineup of frosty brews, live local music, and all kinds of contests and activities to keep you entertained throughout the day.",
+    website: "https://www.atlantagrilledcheese.com/",
+    price: 12
+})
+
+const pintsForPups = new HappeningModel({
+    name: "Pints for Pups",
+    date: "October 14, 2017",
+    time: "2 to 5 p.m.",
+    description: "A leisurely Saturday afternoon of delicious brews, music and doggie love!",
+    website: "http://atlanta.carpediem.cd/events/4681356-pints-for-pups-at-the-marlay-house/",
+    price: 5
+})
+
+const christmasRace = new HappeningModel({
+    name: "Atlanta Christmas 5K",
+    date: "December 9, 2017",
+    time: "8 a.m.",
+    description: "The Atlanta Christmas 5K runs through Virginia-Highland and Morningside neighborhoods.",
+    website: "http://www.rungeorgia.com/vahichristmas.html",
+    price: 35
+})
+
+
 
 // const pendingNeighborhoods = [];
 const cabbagetownHappenings = [chompAndStomp, yardSale];
 const candlerParkHappenings = [candlerParkFarmersMarket];
-const decaturHappenings = [decaturBookFestival];
-const grantParkHappenings = [grantParkFarmersMarket];
+const decaturHappenings = [decaturBookFestival, pintsForPups];
+const grantParkHappenings = [grantParkFarmersMarket, pupCultureFestival];
 const inmanParkHappenings = [inmanParkRestoWeek, freedomFarmersMarket];
-const ponceyHighlandHappenings = [sabChineseNewYear];
-const virginiaHighlandHappenings = [murphysTreeLighting];
+const ponceyHighlandHappenings = [sabChineseNewYear, grilledCheeseFestival];
+const virginiaHighlandHappenings = [murphysTreeLighting, christmasRace];
 
 
 //save arrays
