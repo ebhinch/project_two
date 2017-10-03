@@ -209,7 +209,6 @@ const murphysTreeLighting = new HappeningModel({
     price: 5
 })
 
-
 // const pendingNeighborhoods = [];
 const cabbagetownHappenings = [chompAndStomp, yardSale];
 const candlerParkHappenings = [candlerParkFarmersMarket];

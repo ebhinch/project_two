@@ -1,20 +1,19 @@
-<main>
+<main class="blank-page-background"> 
 <div>
 
     <h1>{{happening.name}} Event Details</h1>
 
-    <h4>NAME: {{happening.name}}</h4>
-    <h4>DATE: {{happening.date}}</h4>
-    <h4>DESCRIPTION: {{happening.description}}</h4>
-    <h4>WEBSITE: <a href="{{happening.website}}">{{happening.website}}</a></h4>
-    <h4>PRICE: {{happening.price}}</h4>
+    <h4 class="happening-show-info">NAME: {{happening.name}}</h4>
+    <h4 class="happening-show-info">DATE: {{happening.date}}</h4>
+    <h4 class="happening-show-info">DESCRIPTION: {{happening.description}}</h4>
+    <h4 class="happening-show-info">WEBSITE: <a href="{{happening.website}}">{{happening.website}}</a></h4>
+    <h4 class="happening-show-info">PRICE: ${{happening.price}}</h4>
 
 
-
+<div class="happening-show-foot">
     <a href="/neighborhoods/{{neighborhoodId}}/happenings/{{happening._id}}/edit">Edit</a>
     <a href="/neighborhoods/{{neighborhoodId}}/happenings/{{happening._id}}/delete">Delete</a>
-    <a href="/">Back to LOCALIVING's Homepage</a>
-
+</div>
 
 </div>
 
