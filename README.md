@@ -8,7 +8,7 @@
 * [Wireframes](https://marvelapp.com/project/2298707/)
 * [ERDs](https://github.com/ebhinch/project_two/commit/728cfccbd859adbb2621e10c3c8b19853da824b8)
 
-<img src="/public/images/wdi-project-2.png>
+<img src="/public/images/wdi-project-2.png">
 
 ## LINKS TO APP
 * [Deployed to Heroku](https://nameless-refuge-16584.herokuapp.com/) 
@@ -42,3 +42,7 @@
 * Materialize
 * Class notes 
 * Classmate collaboration 
+####Below are references to artwork and photos used:
+*Parallax Image 1: Yo Yo Ferro
+*Parallax Image 2: Atlanta Trails
+*Parallax Image 3: Tiny Doors ATL
