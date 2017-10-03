@@ -33,3 +33,4 @@
 #### As any new developer will, I did encounter problems I was not able to solve. These problems included: 
 * Adding a respective neighborhood show page to user show pages: I had really hoped to have a link showing the upcoming events occuring in a user's home neighborhood included on that user's show page. Unfortunately because the user model and neighborhood model are not connected, I was not able to figure out the relationship. 
 * Working with dates: I had hoped to use the data type "Date" for my dates rather than "String." I had also hoped to include a calendar in my forms rather than having a user type a date in as a string. I know that dates are tedious to work with and am sure with more experience I can tackle this as well. 
+*I'd like to add functionality to make events list in chronological order on the neighborhood show pages.
