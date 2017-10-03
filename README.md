@@ -14,8 +14,8 @@
 * [Deployed to Heroku](https://nameless-refuge-16584.herokuapp.com/) 
 * [GitHub](https://github.com/ebhinch/project_two) 
 
-##PORTFOLIO SITE LINK
-* [Portfolio:](http://administrator-horse-64080.bitballoon.com/)
+## PORTFOLIO SITE LINK
+* [Portfolio](http://administrator-horse-64080.bitballoon.com/)
 
 ## TECHNOLOGIES USED 
 * OCALIVIN was built using NodeJS, Express, MongoDB, Mongoose, Materialize, Handlebars, Heroku, Google Fonts, CSS, JavaScript, jQuery, Trello, Marvel, draw.io, and more. It is a full CRUD app, using all seven RESTful routes in the "happening" controller and many of the routes in the admin and user controllers as well. 
@@ -39,9 +39,10 @@
 
 ##RESOURCES
 ####I worked with the following resources and used these resources as guides:
-* Materialize
+* Materialize: I used small snippets of code from Materialize throughout my app...particularly with Parallax, cards and the hamburger nav
 * Class notes 
 * Classmate collaboration 
+
 ####Below are references to artwork and photos used:
 *Parallax Image 1: Yo Yo Ferro
 *Parallax Image 2: Atlanta Trails
