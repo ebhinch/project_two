@@ -4,13 +4,15 @@
 ### An app linking intown Atlantans to events, large and small, happening in and around their neighborhoods. The app allows users to create accounts, view, suggest, edit, and delete events in their neighborhoods, and to suggest neighborhoods they'd like to see added to LOCALIVIN's database. A full-stack server application, LOCALIVIN was inspired my passion for local living and connecting Atlantans to each other.
 
 ## User Stories, Wireframes, and ERDs:
-* [User Stories:](https://trello.com/b/7sKf4hom/wdi-project-2)
-* [Wireframes:](https://marvelapp.com/project/2298707/)
+* [User Stories](https://trello.com/b/7sKf4hom/wdi-project-2)
+* [Wireframes](https://marvelapp.com/project/2298707/)
 * [ERDs](https://github.com/ebhinch/project_two/commit/728cfccbd859adbb2621e10c3c8b19853da824b8)
 
+<img src="/public/images/wdi-project-2.png>
+
 ## LINKS TO APP
-* [Deployed to Heroku:](https://nameless-refuge-16584.herokuapp.com/) 
-* [GitHub:](https://github.com/ebhinch/project_two) 
+* [Deployed to Heroku](https://nameless-refuge-16584.herokuapp.com/) 
+* [GitHub](https://github.com/ebhinch/project_two) 
 
 ##PORTFOLIO SITE LINK
 * [Portfolio:](http://administrator-horse-64080.bitballoon.com/)
@@ -34,3 +36,9 @@
 * Adding a respective neighborhood show page to user show pages: I had really hoped to have a link showing the upcoming events occuring in a user's home neighborhood included on that user's show page. Unfortunately because the user model and neighborhood model are not connected, I was not able to figure out the relationship. 
 * Working with dates: I had hoped to use the data type "Date" for my dates rather than "String." I had also hoped to include a calendar in my forms rather than having a user type a date in as a string. I know that dates are tedious to work with and am sure with more experience I can tackle this as well. 
 *I'd like to add functionality to make events list in chronological order on the neighborhood show pages.
+
+##RESOURCES
+####I worked with the following resources and used these resources as guides:
+* Materialize
+* Class notes 
+* Classmate collaboration 
