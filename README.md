@@ -9,8 +9,8 @@
 * [ERDs](https://github.com/ebhinch/project_two/commit/728cfccbd859adbb2621e10c3c8b19853da824b8)
 
 ## LINKS TO APP
-* [Deployed to Heroku: ] () 
-* [GitHub: ] () 
+* [Deployed to Heroku:](https://nameless-refuge-16584.herokuapp.com/) 
+* [GitHub:](https://github.com/ebhinch/project_two) 
 
 ##PORTFOLIO SITE LINK
 * [Portfolio:](http://administrator-horse-64080.bitballoon.com/)
