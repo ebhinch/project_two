@@ -5,7 +5,7 @@
 
 ## User Stories, Wireframes, and ERDs:
 * [User Stories](https://trello.com/b/7sKf4hom/wdi-project-2)
-* [Wireframes](https://marvelapp.com/project/2298707/)
+* [Wireframes](https://marvelapp.com/2hfaaad)
 * [ERDs](https://github.com/ebhinch/project_two/commit/728cfccbd859adbb2621e10c3c8b19853da824b8)
 
 <img src="/public/images/wdi-project-2.png">
