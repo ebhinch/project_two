@@ -158,11 +158,11 @@ a:hover{
   letter-spacing: 2px;
 }
 
-/* #mobile-demo{
-  width: 40%;
-} */
+#mobile-demo{
+padding-top: 10px;
+}
 
-.black-text{
+.mobile-text{
   font-size: 2em !important;
 }
 
