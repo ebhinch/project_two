@@ -11,14 +11,14 @@
 <img src="/public/images/wdi-project-2.png">
 
 ## LINKS TO APP
-* [Deployed to Heroku](https://nameless-refuge-16584.herokuapp.com/) 
+* [Deployed to Heroku](https://localivin.herokuapp.com/) 
 * [GitHub](https://github.com/ebhinch/project_two) 
 
 ## PORTFOLIO SITE LINK
 * [Portfolio](http://administrator-horse-64080.bitballoon.com/)
 
 ## TECHNOLOGIES USED 
-* OCALIVIN was built using NodeJS, Express, MongoDB, Mongoose, Materialize, Handlebars, Heroku, Google Fonts, CSS, JavaScript, jQuery, Trello, Marvel, draw.io, and more. It is a full CRUD app, using all seven RESTful routes in the "happening" controller and many of the routes in the admin and user controllers as well. 
+* LOCALIVIN was built using NodeJS, Express, MongoDB, Mongoose, Materialize, Handlebars, Heroku, Google Fonts, CSS, JavaScript, jQuery, Trello, Marvel, draw.io, and more. It is a full CRUD app, using all seven RESTful routes in the "happening" controller and many of the routes in the admin and user controllers as well. 
 * Styling was accomplished with Materialize, Google Fonts, Google Icons, and my own CSS stylesheet. Having never used Materialize before, this project allowed me to sharpen my skills using a front-end framework as well as using CSS to override Materialize when necessary. 
 
 ## APPROACH TAKEN
